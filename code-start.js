@@ -5,6 +5,16 @@
 // ['kiwi', 'apple', 'orange']
 
 const myFruits = ["kiwi", "apple", "kiwi", "orange", "kiwi", "apple"];
+function getUniqueFruits(list) {
+  const unique = {};
+  list.forEach((f) => {
+    if (!unique[f]) {
+      unique[f] = true;
+    }
+  });
+  return Object.keys(unique);
+}
+console.log(getUniqueFruits(myFruits));
 
 // 3. Создать функцию, которая сгруппирует студентов по возрасту.
 // На выходе получить объект, где ключ - возраст,
