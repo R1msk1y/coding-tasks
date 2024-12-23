@@ -20,7 +20,18 @@ const students = [
   { name: "masha", age: 20 },
   { name: "stas", age: 18 },
 ];
-
+function groupedStudents(list) {
+  const grouped = {};
+  list.forEach((s) => {
+    if (!grouped[s.age]) {
+      grouped[s.age] = [s];
+    } else {
+      grouped[s.age].push(s);
+    }
+  });
+  return grouped;
+}
+console.log(groupedStudents(students));
 // 5. Получить единый массив из любимых пицц каждого друга
 // ['cheese', 'pepperoni', 'meat', 'fish']
 const friends = [
