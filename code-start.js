@@ -1,5 +1,20 @@
 // 1. Сколько раз каждый элемент встречается в массиве:
+const fruits = ["kiwi", "apple", "kiwi", "orange", "kiwi", "apple"];
 // {kiwi: 3, apple: 2, orange: 1}
+
+function calcFruites(list) {
+  const objWithFruits = {};
+  list.forEach((f) => {
+    if (!objWithFruits[f]) {
+      objWithFruits[f] = 1;
+    } else {
+      objWithFruits[f] = objWithFruits[f] + 1;
+    }
+  });
+  return objWithFruits;
+}
+
+console.log(calcFruites(fruits));
 
 // 2. Создать массив который содержит только уникальные значения
 // ['kiwi', 'apple', 'orange']
