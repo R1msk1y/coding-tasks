@@ -21,7 +21,7 @@ const students = [
   { name: "stas", age: 18 },
 ];
 
-// 5. Получить единый массив из любимых пицц каждого друга
+// 4. Получить единый массив из любимых пицц каждого друга
 // ['cheese', 'pepperoni', 'meat', 'fish']
 const friends = [
   { name: "alex", pizzas: ["cheese", "pepperoni"] },
@@ -29,6 +29,10 @@ const friends = [
   { name: "stas", pizzas: ["meat"] },
   { name: "anna", pizzas: ["fish"] },
 ];
+const reduceResult = friends.reduce((prevValue, curValue) => {
+  return [...prevValue, ...curValue.pizzas];
+}, []);
+console.log(reduceResult);
 
 // 6. Записать строку (символы строки) в обратном порядке (2 способа)
 // pizza => azzip
