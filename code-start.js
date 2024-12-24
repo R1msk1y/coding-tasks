@@ -23,3 +23,11 @@ const palindrom = (str)=>{
 }
 console.log(palindrom('abba'));
 console.log(palindrom('hello'));
+
+//Продвинутый вариант без сокращений
+const palindrom2 = (str)=>{
+    str = str.toLowerCase();
+    return str == str.split('').reverse().join('');
+}
+console.log(palindrom2('abba'));
+console.log(palindrom2('hello'));
